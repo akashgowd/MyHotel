@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MyHotel.Models.Userbooking>
+@{
+    ViewData["Title"] = "Userdisplay";
+    Layout = "~/Views/Shared/Template.cshtml";
+}
+
+<br />
+
+
+
+<br />
+<section class="services" id="services">
+   
+
+
+
+
+    <div class="services-container">
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                @*<img class="card-img-top" src=@Url.Content("~/Images/"+item.room.Roomimage+".jpg") alt="card image cap">*@
+                <div class="card-body">
+                    <h5 class="card-title"> Bookingid: @item.roombooking.Bookingid</h5>
+                    <h5 class="card-title"> Room-No: @item.roombooking.Roomid</h5>
+                    <h5 class="card-title">Roomprice: @item.room.Roomprice</h5>
+                    <h5 class="card-title">Roomcapacity: @item.room.Roomcapacity</h5>
+                    <h5 class="card-title">Customerid: @item.customer.Customerid</h5>
+                    <h5 class="card-title">CustomerName: @item.customer.Customername</h5>
+                    <h5 class="card-title">Bookingfrom: @item.roombooking.Bookingfrom</h5>
+                    <h5 class="card-title">BookingTo: @item.roombooking.BookingTo</h5>
+                    <h5 class="card-title">Paymentamt: @item.payment.Paymentamt</h5>
+                    
+                    @*<h5 class="card-title"> Bookingid: @item.Payments</h5>*@
+
+
+                    @* <a asp-action="delete" asp-route-roomid="@item.Roomid" class="btn btn-danger" aria-disabled="true">Delete</a>*@
+                </div>
+            </div>
+            
+        }
+
+    </div>
+</section>

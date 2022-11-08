@@ -1,0 +1,62 @@
+﻿@model MyHotel.Models.Room
+@{
+    ViewData["Title"] = "add";
+    Layout = "~/Views/Shared/Template.cshtml";
+}
+
+
+
+
+<br />
+
+
+<br />
+<br />
+<br />
+
+
+<br />
+
+<form method="post">
+
+
+
+    <label>Enter roomid</label>
+    <input type="number" asp-for="Roomid" class="form-control" />
+
+    <label>Enter roomprice</label>
+    <input type="number" asp-for="Roomprice" class="form-control" />
+
+    <label>Enter Roomtype</label>
+    <input type="text" asp-for="Roomtype" class="form-control" />
+
+    <label>Enter Roomcapacity</label>
+    <input type="number" asp-for="Roomcapacity" class="form-control" /><br />
+
+    @*<label>Enter Available</label>
+    <input type="text" asp-for="Available" class="form-control" /><br />*@
+
+    <label asp-for="roomimage" class="control-label"></label>
+    <div class="custom-file">
+        <input asp-for="roomimage" class="custom-file-input" id="customFile">
+        <label class="custom-file-label" for="customFile">Choose file</label>
+
+
+
+    </div>
+
+    <span asp-validation-for="roomimage" class="text-black"></span>
+
+
+
+    <br />
+
+    <input type="submit" value="Add" class="btn btn-success"/>
+
+
+</form>
+<br />
+
+<div class="btn btn-success">
+    @ViewData["r"]
+</div>

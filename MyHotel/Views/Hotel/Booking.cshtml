@@ -1,0 +1,56 @@
+﻿@model MyHotel.Models.Roombooking
+@{
+    ViewData["Title"] = "Booking";
+    Layout = "~/Views/Shared/Template.cshtml";
+}
+
+<br />
+
+
+
+
+
+<br />
+
+
+
+
+<section class="services" id="services">
+    <div class="heading">
+        <span><h2>Booking</h2></span>
+
+    </div>
+    <div class="services-container">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=@ViewData["roomimage"] alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> Roomtype: @ViewData["roomtype"]</h5>
+                <h5 class="card-title">Room-No: @ViewData["roomid"]</h5>
+                <h5 class="card-title">RoomPrice: @ViewData["roomprice"]</h5>
+                <h5 class="card-title">RoomCapacity: @ViewData["roomcapacity"]</h5>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
+
+
+
+
+<form method="post">
+    <label>
+        Enter The Check_In Date
+    </label>
+    <input type="hidden" name="Roomid" value="@ViewData["roomid"]" />
+    <input type="date" asp-for="Bookingfrom" class="form-control" /><br />
+    <label>Enter The Check-Out Date</label>
+    <input type="date" asp-for="BookingTo" class="form-control" /><br />
+    <input type="submit" value="Confirm Booking" class="btn btn-info" />
+
+
+
+</form>
+@ViewData["r"]

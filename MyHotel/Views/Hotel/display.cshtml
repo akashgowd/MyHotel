@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MyHotel.Models.Room>
+@{
+    ViewData["Title"] = "display";
+    Layout = "~/Views/Shared/Template.cshtml";
+}
+
+<br />
+
+
+
+<br />
+<section class="services" id="services">
+    <div class="heading">
+        <span>Best Room</span>
+        <h1>Explore Your Dream Stay<br> From Our Best Aamenities</h1>
+    </div>
+
+    
+    <a asp-action="add" class="btn btn-dark" >Add Room</a>
+    <a asp-action="Bookingdisplay" class="btn btn-dark">Booking</a>
+    <a asp-action="Custdetails" class="btn btn-dark">Users Details</a>
+   
+    <div class="services-container">
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@item.Roomimage" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"> Roomtype: @item.Roomtype</h5>
+                    <h5 class="card-title">Room-No: @item.Roomid</h5>
+                    <h5 class="card-title">RoomPrice: @item.Roomprice</h5>
+                    <h5 class="card-title">RoomCapacity: @item.Roomcapacity</h5>
+
+
+
+                    <a asp-action="delete" asp-route-roomid="@item.Roomid" class="btn btn-danger" aria-disabled="true">Delete</a>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+
+
+

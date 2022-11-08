@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: darkblue;
+    --second-color: gold;
+    --text-color: black;
+    --gradient: linear-gradient(darkblue,white);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+
+
+section {
+    padding: 50px 100px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px 100px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.navbar {
+    display: flex;
+}
+
+    .navbar li {
+        position: relative;
+    }
+
+
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 10px 20px;
+        color: var(--text-color);
+        font-weight: 500;
+    }
+
+        .navbar a::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: var(--gradient);
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        .navbar a:hover {
+            background-color: darkblue;
+            border-radius: 5rem;
+        }
+
+            .navbar a:hover::after {
+                width: 100%;
+            }
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+.header-btn a {
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header-btn .sign-in {
+    background: darkblue;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+    .header-btn .sign-in:hover {
+        background: var(--main-color)
+    }
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+.text span {
+    color: var(--main-color);
+}
+
+.text p {
+    margin: 00.5rem 0 1rem;
+}
+
+.app-stores img {
+    width: 100px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: white;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+
+.input-box {
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+    .input-box input {
+        padding: 7px;
+        outline: none;
+        border: none;
+        background: white;
+        border-radius: 00.5rem;
+        font-size: 1rem;
+    }
+
+.form-container .btn {
+    flex: 1 1 7rem;
+    padding: 10px 34px;
+    border: none;
+    border-radius: 0.5rem;
+    background: darkblue;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+    .form-container .btn:hover {
+        background: var(--main-color);
+    }
+
+.heading {
+    text-align: center;
+}
+
+    .heading span {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+.ride-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+}
+
+    .ride-container .box {
+        text-align: center;
+        padding: 20px;
+    }
+
+        .ride-container .box .bx {
+            font-size: 34px;
+            padding: 10px;
+            background: white;
+            border-radius: 0.5rem;
+            color: var(--main-color);
+        }
+
+        .ride-container .box h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 1.4rem 0 0.5rem;
+        }
+
+        .ride-container .box .bx:hover,
+        .ride-container .box .bxs-calender-check {
+            background: var(--gradient);
+            color: white;
+        }
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-text span {
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.about-text p {
+    margin: 0.5rem 0 1.4rem;
+}
+
+.about-text .btn {
+    padding: 10px 20px;
+    background: darkblue;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+    .about-text .btn:hover {
+        background: darkblue;
+    }
+
+.copyright {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social a {
+    color: grey;
+    padding: 10px;
+    font-size: 21px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+    .services-container .box {
+        padding: 10px;
+        border-radius: 1rem;
+        box-shadow: 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .services-container .box .card {
+            width: 100%;
+            height: 200px;
+        }
+
+            .services-container .box .card img {
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+                object-fit: cover;
+                object-position: center;
+            }
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    /*background: #f093fb;*/
+    /* Chrome 10-25, Safari 5.1-6 */
+    /*background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));*/
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))*/
+    background-color:darkblue;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
