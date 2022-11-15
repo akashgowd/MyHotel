@@ -37,7 +37,13 @@
 
                 <li><a asp-action="Login">Login</a></li>
             }
-            <li><a href="#">welcome: @Context.User.Identity.Name</a></li>
+            @if (Context.User.Identity.Name==null){
+                <li><a href="#">welcome: Guest</a></li>
+            }
+            else{
+                <li><a href="#">welcome: @Context.User.Identity.Name</a></li>
+            }
+           
 
 
         </ul>

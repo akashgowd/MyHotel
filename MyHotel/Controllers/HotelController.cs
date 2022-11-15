@@ -246,9 +246,16 @@ namespace MyHotel.Controllers
         [HttpPost]
         public IActionResult Search(string ser)
         {
+
+
             var res = from t in dc.Rooms
-                      where t.Roomtype == ser
+                      where t.Available == true
+                       where t.Roomtype == ser
                       select t;
+            
+            //var res = from t in dc.Rooms
+            //          where t.Roomtype == ser
+            //          select t;
 
 
             return View(res);
