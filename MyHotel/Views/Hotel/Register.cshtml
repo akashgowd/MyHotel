@@ -21,7 +21,7 @@
 
 
                                     <div class="form-outline">
-                                        <input type="text" id="Name" asp-for="Customername" class="form-control form-control-lg" />
+                                        <input type="text" id="Name" asp-for="Customername" class="form-control form-control-lg" required />
                                         <label class="form-label" for="firstName"> Name</label>
                                     </div>
 
@@ -38,7 +38,7 @@
 
 
                                     <div class="form-outline datepicker w-100">
-                                        <input type="text" id="Name" asp-for="Address" class="form-control form-control-lg" />
+                                        <input type="text" id="Name" asp-for="Address" class="form-control form-control-lg" required />
                                         <label class="form-label" for="firstName"> Address</label>
                                     </div>
 
@@ -64,7 +64,7 @@
 
 
                                     <div class="form-check form-check-inline">
-                                        <input type="radio" asp-for="Gender" value="true" class="form-check-input" />
+                                        <input type="radio" asp-for="Gender" value="true" class="form-check-input" required />
                                         <label><b>Female</b></label>
                                     </div>
 
@@ -92,7 +92,7 @@
 
 
                                     <div class="form-outline">
-                                        <input type="tel" id="phoneNumber" asp-for="Phonenumber" class="form-control form-control-lg" />
+                                        <input type="tel" id="phoneNumber" asp-for="Phonenumber" class="form-control form-control-lg" required />
                                         <label class="form-label" for="phoneNumber">Phone Number</label>
                                     </div>
 
@@ -104,7 +104,7 @@
 
 
                                     <div class="form-outline">
-                                        <input type="email" id="emailAddress" asp-for="Email" class="form-control form-control-lg" />
+                                        <input type="email" id="emailAddress" asp-for="Email" class="form-control form-control-lg" required />
                                         <label class="form-label" for="emailAddress">Email</label>
                                     </div>
 
@@ -118,7 +118,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-outline ">
-                                            <input type="password" asp-for="Password" class="form-control form-control-lg" id="pwd" />
+                                            <input type="password" asp-for="Password" class="form-control form-control-lg" id="pwd" pattern="(\d)([a-z])([A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
                                             <label for="Password" class="form-label">Password</label>
                                         </div>
 
